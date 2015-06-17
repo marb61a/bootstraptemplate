@@ -138,5 +138,15 @@
     <!-- Scripts placed at the end of the document so to ensure faster page loads -->
     <script src="js/jquery-1.11.3.js"></script>
     <script src="js/bootstrap.js"></script>
+    <script src="js/ekko-lightbox.js"></script>
+    <script>
+      $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+      }); 
+      $(function () {
+        $('[data-hover="tooltip"]').tooltip()
+      })
+    </script>
   </body>
 </html>
